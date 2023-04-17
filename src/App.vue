@@ -17,7 +17,8 @@ export default {
 
   methods: {},
   mounted() {
-    store.fetchCard(this.store.API_URL);
+    store.fetchCards(this.store.API_URL_CARD);
+    store.fetchArchetypes(this.store.API_URL_ARCHETYPE);
   },
 };
 </script>
