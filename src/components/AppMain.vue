@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-  <main class="">
+  <main class="pt-5">
     <CardList />
   </main>
 </template>
