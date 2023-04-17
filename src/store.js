@@ -4,18 +4,15 @@ import axios from "axios";
 export const store = reactive({
     searchText: "",
     loading: true,
-    API_URL: "https://db.ygoprodeck.com/api/v7/cardinfo.php",
+    API_URL: "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=2&offset=0",
     cards: null,
-    info: null,
     fetchCard(url) {
         axios
             .get(url)
             .then((response) => {
-                this.cards = response.data;
-                //this.info = response.data.info;
+                this.cards = response.data.data;
                 this.loading = false;
-                //console.log(response.data);
-                //console.log(this.cards)
+                console.log(this.cards[0].name)
             })
             .catch((err) => {
                 console.log(err);
