@@ -11,10 +11,11 @@ export const store = reactive({
         axios
             .get(url)
             .then((response) => {
-                //console.log(response.data);
-                this.cards = response.data.results;
-                this.info = response.data.info;
+                this.cards = response.data;
+                //this.info = response.data.info;
                 this.loading = false;
+                //console.log(response.data);
+                //console.log(this.cards)
             })
             .catch((err) => {
                 console.log(err);
