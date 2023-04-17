@@ -13,4 +13,12 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <div class="card">
+    <img class="img-fluid" :src="card.card_images.image_url" :alt="card.name" />
+    <div class="text text-center">
+      <div class="text-light archetype">{{ card.name }}</div>
+      <div class="archetype">{{ card.archetype }}</div>
+    </div>
+  </div>
+</template>
