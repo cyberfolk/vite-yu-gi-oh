@@ -11,14 +11,7 @@ export default {
 </script>
 
 <template>
-  <div v-if="!store.loading_cards" class="container">
+  <div v-if="!store.loading_cards">
     <div class="mb-3 px-3 py-2 bg-light w-50 rounded fw-bold">Cards show: {{ store.cards.length }}</div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-@use "../assets/scss/partials/variables" as *;
-.container {
-  background-color: $primary;
-}
-</style>

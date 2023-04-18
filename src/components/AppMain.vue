@@ -23,10 +23,12 @@ export default {
 </script>
 
 <template>
-  <main class="py-5">
-    <ButtonFilter @filter-select="store.fetchCards(store.API_URL_CARD, store.filter)" />
-    <CountResult />
-    <CardList />
+  <main>
+    <div class="container py-5">
+      <ButtonFilter @filter-select="store.fetchCards(store.API_URL_CARD, store.filter)" />
+      <CountResult />
+      <CardList />
+    </div>
   </main>
 </template>
 
