@@ -11,10 +11,9 @@ export const store = reactive({
     archetype_selected: "",
 
     fetchCards(url, archetype = "") {//archetype is an optional parameter
-        const queryLimitator = this.createQueryLimitator(10, 0);
-        let queryArchetype = this.createQueryArchetype(archetype)
-        let urlComposite = url + "?" + queryLimitator + queryArchetype;
-        console.log(urlComposite);
+        this.loading_cards = true;
+        let urlComposite = this.createUrlComposite(url, 1000, 0, archetype);
+        //console.log(urlComposite);
 
         axios
             .get(urlComposite)
@@ -39,6 +38,12 @@ export const store = reactive({
                 console.error(err.message);
             });
 
+    },
+
+    createUrlComposite(url, num, offset, archetype) {
+        const queryLimitator = this.createQueryLimitator(num, offset);
+        let queryArchetype = this.createQueryArchetype(archetype)
+        return url + "?" + queryLimitator + queryArchetype;
     },
 
     createQueryLimitator(num, offset) {

@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <main class="pt-5">
+  <main class="py-5">
     <ButtonFilter @makeSearch="store.fetchCards(store.API_URL_CARD)" />
     <CardList />
   </main>

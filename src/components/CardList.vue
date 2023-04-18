@@ -21,9 +21,7 @@ export default {
         <CardItem class="col mt-4" v-for="card in store.cards" :card="card" />
       </div>
     </div>
-    <div class="loader" v-else>
-      <p>loading...</p>
-    </div>
+    <div class="loader fs-4" v-else>loading...</div>
   </div>
 </template>
 
