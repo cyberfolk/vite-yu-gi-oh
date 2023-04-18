@@ -36,5 +36,6 @@ export default {
 @use "../assets/scss/partials/variables" as *;
 main {
   background-color: $primary;
+  min-height: 80vh;
 }
 </style>
