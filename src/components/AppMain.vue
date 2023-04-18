@@ -1,4 +1,5 @@
 <script>
+import { store } from "../store.js";
 import ButtonFilter from "./ButtonFilter.vue";
 import CardList from "./CardList.vue";
 export default {
@@ -6,6 +7,15 @@ export default {
   components: {
     CardList,
     ButtonFilter,
+  },
+  data() {
+    return {
+      store,
+    };
+  },
+  mounted() {
+    store.fetchCards(store.API_URL_CARD);
+    store.fetchArchetypes(store.API_URL_ARCHETYPE);
   },
 };
 </script>
