@@ -8,9 +8,20 @@ export const store = reactive({
     API_URL_ARCHETYPE: "https://db.ygoprodeck.com/api/v7/archetypes.php",
     cards: null,
     archetypes: null,
+    archetypeSelected: "",
+    //https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=Blue-Eyes
     fetchCards(url) {
+        const limitatorQuery = "num=1000&offset=0";
+        let archetypeQuery = "";
+
+        if (this.archetypeSelected) {
+            archetypeQuery = `&archetype=${this.archetypeSelected}`
+        }
+
+        let urlComposite = url + "?" + limitatorQuery + archetypeQuery;
+
         axios
-            .get(url)
+            .get(urlComposite)
             .then((response) => {
                 this.cards = response.data.data;
                 this.loading_cards = false;

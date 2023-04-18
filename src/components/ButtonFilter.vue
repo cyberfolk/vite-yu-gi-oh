@@ -2,15 +2,15 @@
 import { store } from "../store.js";
 export default {
   name: "ButtonFilter",
+  //emits: ["makeSearch", "submit"],
   data() {
     return {
       store,
-      archetypeSelected: "",
     };
   },
   computed: {
     filteredList() {
-      return store.cards.filter((card) => card.archetype == this.archetypeSelected);
+      return store.fetchCards(store.API_URL_CARD);
     },
   },
 };
@@ -18,12 +18,11 @@ export default {
 
 <template>
   <div class="container">
-    <select class="form-select my-3 w-50" v-model="archetypeSelected">
+    <!--     <select class="form-select my-3 w-50" v-model="store.archetypeSelected" @select="$emit('makeSearch')"> -->
+    <select class="form-select my-3 w-50" v-model="store.archetypeSelected">
       <option value="">- Select an Archetype</option>
       <option v-for="archetype in store.archetypes" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
     </select>
-    <!--     <div v-if="!archetypeSelected">{{ filteredList }}</div>
- -->
   </div>
 </template>
 

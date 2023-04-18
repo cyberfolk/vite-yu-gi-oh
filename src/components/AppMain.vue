@@ -22,7 +22,7 @@ export default {
 
 <template>
   <main class="pt-5">
-    <ButtonFilter />
+    <ButtonFilter @makeSearch="store.fetchCards(store.API_URL_CARD)" />
     <CardList />
   </main>
 </template>
