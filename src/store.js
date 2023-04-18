@@ -8,7 +8,7 @@ export const store = reactive({
     API_URL_ARCHETYPE: "https://db.ygoprodeck.com/api/v7/archetypes.php",
     cards: null,
     archetypes: null,
-    archetype_selected: "",
+    filter: "",
 
     fetchCards(url, archetype = "") {//archetype is an optional parameter
         this.loading_cards = true;

@@ -10,7 +10,7 @@ export default {
   },
   computed: {
     filteredList() {
-      return store.fetchCards(store.API_URL_CARD, store.archetype_selected);
+      return store.fetchCards(store.API_URL_CARD, store.filter);
     },
   },
 };
@@ -18,9 +18,8 @@ export default {
 
 <template>
   <div class="container">
-    <!--     <select class="form-select my-3 w-50" v-model="store.archetype_selected" @select="$emit('makeSearch')"> -->
-    <select class="form-select my-3 w-50" v-model="store.archetype_selected">
-      <option value="">- Select an Archetype</option>
+    <select class="form-select my-3 w-50" v-model="store.filter" @change="$emit('filter-select')">
+      <option value="" selected>- Select an Archetype</option>
       <option v-for="archetype in store.archetypes" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
     </select>
   </div>

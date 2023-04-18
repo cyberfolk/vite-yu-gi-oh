@@ -1,12 +1,14 @@
 <script>
 import { store } from "../store.js";
 import ButtonFilter from "./ButtonFilter.vue";
+import CountResult from "./CountResult.vue";
 import CardList from "./CardList.vue";
 export default {
   name: "AppMain",
   components: {
     CardList,
     ButtonFilter,
+    CountResult,
   },
   data() {
     return {
@@ -22,7 +24,8 @@ export default {
 
 <template>
   <main class="py-5">
-    <ButtonFilter @makeSearch="store.fetchCards(store.API_URL_CARD)" />
+    <ButtonFilter @filter-select="store.fetchCards(store.API_URL_CARD, store.filter)" />
+    <CountResult />
     <CardList />
   </main>
 </template>
