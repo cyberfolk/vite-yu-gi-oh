@@ -1,4 +1,4 @@
-# vite-yu-gi-oh
+# Vite-Yu-Gi-Oh
 
 **Initial commit**: 17/04/23
 
