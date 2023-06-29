@@ -2,7 +2,7 @@
 
 **Initial commit**: 17/04/23
 
-**Tecnologie:** vite, vue.js, js, axios, html, css e bootstrap.
+**Tecnologie:** Vite, Vue.js, Javascript, Axios, HTML, CSS, SASS e Bootstrap.
 
 🃏 A voi le carte da collezione di un gioco con in quale siamo cresciutio: Yu-Gi-Oh!
 
