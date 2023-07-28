@@ -8,8 +8,7 @@
 
 In questo esercizio, usando Axios ho interrograto un API per ricevere le carte della collezione e poi successivamente stamparle nel sito tramite gli appositi componenti vue.js. Per finire ho aggiunto la possibilità di filtrare le carte per archetipo usando il v-model sempre offerto da Vue.js ... Che bello poter ammirare i pezzi di Exodia finalmente riuniti!
 
-🖇️ Repository:
-https://github.com/cyberfolk/vite-yu-gi-oh
+https://github.com/cyberfolk/vite-yu-gi-oh/assets/114855536/23d1ab88-fb1d-4b33-adb0-63bb3dcf2af9
 
 ## Milestone:
 
