@@ -4,16 +4,16 @@
 
 **Tecnologie:** Vite, Vue.js, Javascript, Axios, HTML, CSS, SASS e Bootstrap.
 
-🃏 A voi le carte da collezione di un gioco con in quale siamo cresciutio: Yu-Gi-Oh!
+**Info**: 🃏 Here are the collector's cards of a game we grew up with Yu-Gi-Oh!
+In this exercise, using Axios I queried an API to receive the cards from the collection and then subsequently print them on the site using the appropriate vue.js components. Finally, I added the possibility of filtering the cards by archetype using the v-model also offered by Vue.js... How nice to be able to admire the pieces of Exodia finally reunited!
 
-In questo esercizio, usando Axios ho interrograto un API per ricevere le carte della collezione e poi successivamente stamparle nel sito tramite gli appositi componenti vue.js. Per finire ho aggiunto la possibilità di filtrare le carte per archetipo usando il v-model sempre offerto da Vue.js ... Che bello poter ammirare i pezzi di Exodia finalmente riuniti!
-
+## Video Demo
 https://github.com/cyberfolk/vite-yu-gi-oh/assets/114855536/23d1ab88-fb1d-4b33-adb0-63bb3dcf2af9
 
 ## Milestone:
 
-- Creatre un nuovo progetto utilizzando Vite e Vue 3
-- Definire i componenti necessari per strutturare il layout.
-- Al caricamento della pagina, effettuate una chiama ajax all'[API di Yu-Gi-Ho](https://ygoprodeck.com/api-guide/)
-- Con i dati restituiti, stampate una card per ogni carta.
-- Creare un componente loader da visualizzare fintantoché i risultati non sono pronti.
+- Create a new project using Vite and Vue 3
+- Define the components necessary to structure the layout.
+- When the page loads, make an Axios call to the [Yu-Gi-Ho API](https://ygoprodeck.com/api-guide/)
+- With the returned data, print a card for each card.
+- Create a loader component to display until the results are ready.
